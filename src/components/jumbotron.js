@@ -14,6 +14,11 @@ class JumboTron extends Component {
 	}
 
 	render() {
+		var wrapper_style = {
+			padding:'0px',
+			marginBottom:'10px'
+		}
+
 		var jumbo_style = {
 			height: '600px',
 			backgroundColor:this.props.bg_color || '#2975de',
@@ -60,20 +65,22 @@ class JumboTron extends Component {
 
 
 		return (
-		    <section class="jumbo" style={jumbo_style}>
-		      <div class="wrap row" style={wrap_style}>
-		          {
-		          	  this.props.children || 
-			          <div class="jumbo-content" style={jumbo_content_style}>
-			           	<h2 style={h2_p_style}>{this.props.title}</h2>
-			            <p style={h2_p_style}>{this.props.description}</p>
-			            <button type="button" class="start-button large button" style={start_button_style}>
-			            	{this.props.action_button_text}
-			            </button>
-			          </div>
-		      		}
-		      </div>
-		    </section>
+			<div className='small-12 large-12 columns' style={wrapper_style}>
+			    <div class="jumbo" style={jumbo_style}>
+			      <div class="wrap row" style={wrap_style}>
+			          {
+			          	  this.props.children || 
+				          <div class="jumbo-content" style={jumbo_content_style}>
+				           	<h2 style={h2_p_style}>{this.props.title}</h2>
+				            <p style={h2_p_style}>{this.props.description}</p>
+				            <button type="button" class="start-button large button" style={start_button_style}>
+				            	{this.props.action_button_text}
+				            </button>
+				          </div>
+			      		}
+			      </div>
+			    </div>
+			</div>
 		)
 	}
 }

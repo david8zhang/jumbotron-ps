@@ -39,6 +39,11 @@ var JumboTron = (function (_Component) {
 	_createClass(JumboTron, [{
 		key: 'render',
 		value: function render() {
+			var wrapper_style = {
+				padding: '0px',
+				marginBottom: '10px'
+			};
+
 			var jumbo_style = {
 				height: '600px',
 				backgroundColor: this.props.bg_color || '#2975de',
@@ -84,28 +89,32 @@ var JumboTron = (function (_Component) {
 			};
 
 			return _react2.default.createElement(
-				'section',
-				{ 'class': 'jumbo', style: jumbo_style },
+				'div',
+				{ className: 'small-12 large-12 columns', style: wrapper_style },
 				_react2.default.createElement(
 					'div',
-					{ 'class': 'wrap row', style: wrap_style },
-					this.props.children || _react2.default.createElement(
+					{ 'class': 'jumbo', style: jumbo_style },
+					_react2.default.createElement(
 						'div',
-						{ 'class': 'jumbo-content', style: jumbo_content_style },
-						_react2.default.createElement(
-							'h2',
-							{ style: h2_p_style },
-							this.props.title
-						),
-						_react2.default.createElement(
-							'p',
-							{ style: h2_p_style },
-							this.props.description
-						),
-						_react2.default.createElement(
-							'button',
-							{ type: 'button', 'class': 'start-button large button', style: start_button_style },
-							this.props.action_button_text
+						{ 'class': 'wrap row', style: wrap_style },
+						this.props.children || _react2.default.createElement(
+							'div',
+							{ 'class': 'jumbo-content', style: jumbo_content_style },
+							_react2.default.createElement(
+								'h2',
+								{ style: h2_p_style },
+								this.props.title
+							),
+							_react2.default.createElement(
+								'p',
+								{ style: h2_p_style },
+								this.props.description
+							),
+							_react2.default.createElement(
+								'button',
+								{ type: 'button', 'class': 'start-button large button', style: start_button_style },
+								this.props.action_button_text
+							)
 						)
 					)
 				)
