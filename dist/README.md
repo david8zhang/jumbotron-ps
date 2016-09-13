@@ -1,5 +1,5 @@
 # Description
-collapsing sidebar with categories implemented in ReactJS
+jumbotron unit with image and text
 
 # Styles
 You must have Foundation 6 included as part of the project for this component to work!
