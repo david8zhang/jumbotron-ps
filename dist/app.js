@@ -43,7 +43,6 @@ var App = (function (_Component) {
 				'div',
 				null,
 				_react2.default.createElement(_jumbotron2.default, {
-					image_url: 'https://drslash.com/wp-content/uploads/2014/07/Firefox.png',
 					title: 'Sample Title',
 					action_button_text: 'More info!',
 					description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled '
